@@ -1,0 +1,48 @@
+table {
+  border: 0.2ch solid black;
+}
+td {
+  border-collapse: collapse;
+  border: 0.2ch solid black;
+  width: 12rem;
+}
+.tabletitle {
+  display: flex;
+  flex-direction: row;
+  width: 50rem;
+}
+.items {
+  margin-left: 1rem;
+  width: 12rem;
+  text-align: center;
+  font-weight: bold;
+  color: black  ;
+}
+.id {
+  color: green;
+  font-size: 2rem;
+  width: 4rem;
+}
+
+.nasc {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.casa {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+alunoselecionado,
+h2 {
+  color: green;
+  font-weight: bold;
+}
+.info {
+  font-size: 1rem;
+}
+#aluno-nome {
+  border-color: black;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}

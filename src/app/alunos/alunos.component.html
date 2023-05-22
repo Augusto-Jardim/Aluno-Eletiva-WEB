@@ -1,0 +1,27 @@
+<div *ngIf="alunoselecionado">
+  <h2>{{alunoselecionado.nome | uppercase}}</h2>
+  <div class="info">ID: {{alunoselecionado.id}}</div>
+  <div class="info">
+    <label for="aluno-nome">ALUNO SELECIONADO: </label>
+    <input id="aluno-nome" [(ngModel)]="alunoselecionado.nome" placeholder="nome">
+  </div>
+</div>
+
+<table class="alunoscomponent">
+  <tr>
+    <div class="tabletitle">
+      <div class="items">ID</div>
+      <div class="items">NOME DO ALUNO</div>
+      <div class="items">DATA DE NASCIMENTO</div>
+      <div class="items">Ano</div>
+    </div>
+  </tr>
+  <tr *ngFor="let aluno of alunos">
+    <button [class.selected]="aluno === alunoselecionado" type="button" (click)="onSelect(aluno)">
+      <td><span class="id">{{aluno.id}}</span></td>
+      <td><span class="nome">{{aluno.nome}}</span></td>
+      <td><span class="nasc"> {{aluno.nasc | date}}</span></td>
+      <td><span class="nome">{{aluno.casa}}</span></td>
+    </button>
+  </tr>
+</table>
